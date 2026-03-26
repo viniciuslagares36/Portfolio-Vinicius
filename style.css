@@ -2,9 +2,9 @@
     --color-background: #0a0a0f;
     --color-background-secondary: #0f0f16;
     --color-foreground: #e4e4e7;
-    --color-muted: #71717a;
-    --color-primary: #64ffda;
-    --color-primary-dark: #4fd1b2;
+    --color-muted: #f4f4f8e7;
+    --color-primary: #00CFFF;
+    --color-primary-dark: #38ced3d8;
     --color-border: #27272a;
     --color-card: #18181b;
     --color-card-hover: #1f1f23;
@@ -132,7 +132,7 @@ button {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--color-primary);
+    background: #00CFFF;
     transition: var(--transition-base);
 }
 
@@ -210,14 +210,30 @@ button {
     justify-content: center;
     position: relative;
     padding-top: 5rem;
+    background-image: url(Develop\ an\ app_program_tool\ for\ you\ to\ use\ and\ redistribute_\ for\ $125.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.781);
+    z-index: 0;
+    pointer-events: none;
 }
 
 .hero-content {
     max-width: 48rem;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-intro {
-    color: var(--color-primary);
+    color: #0cb0d4;
     font-family: var(--font-mono);
     font-size: 0.875rem;
     margin-bottom: 1.5rem;
@@ -236,13 +252,13 @@ button {
 .hero-subtitle {
     font-size: clamp(1.5rem, 5vw, 3rem);
     font-weight: 700;
-    color: var(--color-muted);
+    color: #00CFFF;
     margin-bottom: 2rem;
     line-height: 1.2;
 }
 
 .hero-description {
-    color: var(--color-muted);
+    color: #ffffffd0;
     font-size: 1rem;
     max-width: 32rem;
     margin-bottom: 3rem;
@@ -261,8 +277,8 @@ button {
     align-items: center;
     gap: 0.5rem;
     padding: 0.875rem 1.75rem;
-    background: var(--color-primary);
-    color: var(--color-background);
+    background: #0cafd4e1;
+    color: #ffffffc4;
     font-size: 0.875rem;
     font-weight: 600;
     border-radius: 0.5rem;
@@ -286,10 +302,10 @@ button {
     gap: 0.5rem;
     padding: 0.875rem 1.75rem;
     background: transparent;
-    color: var(--color-primary);
+    color: rgba(247, 243, 243, 0.925);
     font-size: 0.875rem;
     font-weight: 600;
-    border: 2px solid var(--color-primary);
+    border: 2px solid #00CFFF;
     border-radius: 0.5rem;
     transition: var(--transition-base);
 }
@@ -388,7 +404,7 @@ button {
 /* Projects Section */
 .projects {
     padding: 6rem 0 8rem;
-    background: var(--color-background-secondary);
+    background: transparent;
 }
 
 .projects-grid {
@@ -532,7 +548,7 @@ button {
 .image-background {
     position: absolute;
     inset: 0;
-    background: rgba(100, 255, 218, 0.2);
+    background: #00d0ff1f;
     border-radius: 0.75rem;
     transform: rotate(6deg);
     transition: var(--transition-base);
@@ -546,7 +562,7 @@ button {
     position: absolute;
     inset: 0;
     background: var(--color-background-secondary);
-    border: 2px solid rgba(100, 255, 218, 0.6);
+    border: 2px solid #00d0ffd0;
     border-radius: 0.75rem;
     overflow: hidden;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
@@ -728,5 +744,463 @@ button {
     .image-wrapper {
         width: 20rem;
         height: 20rem;
+    }
+}
+
+/* Laptops (1280px) */
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+        padding: 0 2rem;
+    }
+
+    .section-title {
+        font-size: 2.75rem;
+    }
+
+    .hero-title {
+        font-size: 5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 3.25rem;
+    }
+
+    .hero-description {
+        font-size: 1.125rem;
+        max-width: 40rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+
+    .card-content {
+        padding: 2rem;
+    }
+
+    .card-title {
+        font-size: 1.375rem;
+    }
+
+    .card-description {
+        font-size: 0.9375rem;
+    }
+
+    .image-wrapper {
+        width: 22rem;
+        height: 22rem;
+    }
+
+    .avatar {
+        width: 9rem;
+        height: 9rem;
+    }
+
+    .avatar-initials {
+        font-size: 3.5rem;
+    }
+
+    .skills-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem 1.5rem;
+    }
+}
+
+/* Desktops (1440px) */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1440px;
+        padding: 0 2.5rem;
+    }
+
+    .section-header {
+        margin-bottom: 5rem;
+    }
+
+    .section-title {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.125rem;
+        max-width: 40rem;
+    }
+
+    .hero {
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+    }
+
+    .hero-content {
+        max-width: 56rem;
+    }
+
+    .hero-title {
+        font-size: 5.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 3.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .hero-description {
+        font-size: 1.25rem;
+        max-width: 48rem;
+        margin-bottom: 3.5rem;
+    }
+
+    .hero-buttons {
+        gap: 1.5rem;
+    }
+
+    .btn-primary,
+    .btn-outline {
+        padding: 1rem 2rem;
+        font-size: 0.9375rem;
+    }
+
+    .hero-socials {
+        gap: 1.25rem;
+        margin-top: 4.5rem;
+    }
+
+    .icon-link {
+        padding: 0.75rem;
+    }
+
+    .projects {
+        padding: 8rem 0 10rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.75rem;
+    }
+
+    .card-project {
+        border-radius: 1rem;
+    }
+
+    .card-content {
+        padding: 2.25rem;
+    }
+
+    .card-header {
+        margin-bottom: 1.75rem;
+    }
+
+    .folder-icon {
+        width: 52px;
+        height: 52px;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .card-description {
+        font-size: 0.9375rem;
+        line-height: 1.8;
+        margin-bottom: 2.25rem;
+    }
+
+    .tech-badge {
+        padding: 0.35rem 0.875rem;
+        font-size: 0.8125rem;
+    }
+
+    .about {
+        padding: 8rem 0 10rem;
+    }
+
+    .about-grid {
+        gap: 6.5rem;
+    }
+
+    .about-text {
+        gap: 1.5rem;
+    }
+
+    .about-text p {
+        font-size: 1.0625rem;
+    }
+
+    .skills-title {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+    }
+
+    .skills-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem 1.75rem;
+    }
+
+    .skill-item {
+        gap: 0.875rem;
+        font-size: 0.9375rem;
+    }
+
+    .image-wrapper {
+        width: 24rem;
+        height: 24rem;
+    }
+
+    .avatar {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .avatar-initials {
+        font-size: 4rem;
+    }
+
+    .contact {
+        padding: 8rem 0 10rem;
+    }
+
+    .contact-content {
+        max-width: 40rem;
+    }
+
+    .contact-buttons {
+        gap: 1.5rem;
+        margin-top: 4.5rem;
+    }
+
+    .footer {
+        padding: 3rem 0;
+    }
+
+    .footer-text {
+        font-size: 0.9375rem;
+    }
+}
+
+/* Desktops XL (1680px) */
+@media (min-width: 1680px) {
+    .container {
+        max-width: 1600px;
+    }
+
+    .hero {
+        min-height: 110vh;
+    }
+
+    .hero-content {
+        max-width: 64rem;
+    }
+
+    .hero-title {
+        font-size: 6rem;
+    }
+
+    .hero-subtitle {
+        font-size: 3.75rem;
+    }
+
+    .hero-description {
+        font-size: 1.375rem;
+        max-width: 56rem;
+    }
+
+    .section-title {
+        font-size: 3.25rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.25rem;
+    }
+
+    .projects {
+        padding: 9rem 0 11rem;
+    }
+
+    .projects-grid {
+        gap: 3rem;
+    }
+
+    .card-title {
+        font-size: 1.625rem;
+    }
+
+    .card-description {
+        font-size: 0.96875rem;
+    }
+
+    .image-wrapper {
+        width: 26rem;
+        height: 26rem;
+    }
+
+    .avatar {
+        width: 11rem;
+        height: 11rem;
+    }
+
+    .avatar-initials {
+        font-size: 4.5rem;
+    }
+
+    .about {
+        padding: 9rem 0 11rem;
+    }
+
+    .about-grid {
+        gap: 7.5rem;
+    }
+
+    .about-text {
+        gap: 1.75rem;
+    }
+
+    .about-text p {
+        font-size: 1.125rem;
+    }
+
+    .skills-list {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.25rem 2rem;
+    }
+}
+
+/* Monitores Ultra Wide (1920px+) */
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1800px;
+    }
+
+    .hero {
+        min-height: 120vh;
+    }
+
+    .hero-content {
+        max-width: 72rem;
+    }
+
+    .hero-title {
+        font-size: 6.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 4rem;
+    }
+
+    .hero-description {
+        font-size: 1.5rem;
+        max-width: 64rem;
+    }
+
+    .section-title {
+        font-size: 3.5rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.375rem;
+        max-width: 48rem;
+    }
+
+    .projects {
+        padding: 10rem 0 12rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3.25rem;
+    }
+
+    .card-project {
+        border-radius: 1.25rem;
+    }
+
+    .card-content {
+        padding: 2.5rem;
+    }
+
+    .card-title {
+        font-size: 1.75rem;
+    }
+
+    .card-description {
+        font-size: 1rem;
+    }
+
+    .tech-badge {
+        padding: 0.4rem 1rem;
+        font-size: 0.84375rem;
+    }
+
+    .image-wrapper {
+        width: 28rem;
+        height: 28rem;
+    }
+
+    .avatar {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .avatar-initials {
+        font-size: 5rem;
+    }
+
+    .about {
+        padding: 10rem 0 12rem;
+    }
+
+    .about-grid {
+        gap: 8.5rem;
+    }
+
+    .about-text {
+        gap: 1.875rem;
+    }
+
+    .about-text p {
+        font-size: 1.1875rem;
+    }
+
+    .skills-title {
+        font-size: 1.375rem;
+    }
+
+    .skills-list {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem 2.25rem;
+    }
+
+    .skill-item {
+        gap: 1rem;
+        font-size: 0.96875rem;
+    }
+
+    .contact {
+        padding: 10rem 0 12rem;
+    }
+
+    .contact-content {
+        max-width: 48rem;
+    }
+
+    .contact-intro {
+        font-size: 0.9375rem;
+    }
+
+    .contact-buttons {
+        gap: 1.75rem;
+        margin-top: 5rem;
+    }
+
+    .footer {
+        padding: 3.5rem 0;
+    }
+
+    .footer-text {
+        font-size: 0.96875rem;
     }
 }
